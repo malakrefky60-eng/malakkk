@@ -1,0 +1,178 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #D8C5F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+/* Brand Name */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #35145E;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #35145E;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+/* Background Image Section */
+.hero {
+    min-height: calc(100vh - 80px);
+    background-image: 
+        linear-gradient(rgba(20, 10, 35, 0.4), rgba(20, 10, 35, 0.4)),
+        url("YOUR-IMAGE-LINK-HERE");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Main Content */
+.hero-content {
+    max-width: 1000px;
+    color: white;
+}
+
+/* Main Heading */
+.hero h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.hero h4 {
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Search Bar */
+.search-bar {
+    background-color: #35145E;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Search Items */
+.search-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    gap: 10px;
+}
+
+.search-item label {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search-item select,
+.search-item input {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Book Now Button */
+.book-btn {
+    background-color: #40D6C5;
+    color: #25123D;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 25px;
+}
+
+.book-btn:hover {
+    background-color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h4 {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .book-btn {
+        margin-top: 10px;
+    }
+}
